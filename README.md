@@ -1,5 +1,5 @@
 # Tugas_Pemrograman_Web_2
-Nama: Rian Andri Waskito
-NIM: 119140030
-Kelas: RA
-Tugas membuat halaman web form dan menampilkan hasil form pada halaman kedua
+<br/>Nama: Rian Andri Waskito
+<br/>NIM: 119140030
+<br/>Kelas: RA
+<br/>Tugas membuat halaman web form dan menampilkan hasil form pada halaman kedua
