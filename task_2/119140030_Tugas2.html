@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Form Pendaftaran | Rian Andri Waskito</title>
+    
+  </head>
+<body>
+  <div class="tugas">
+    <div class="judul">Pendaftaran</div>
+    <div class="isi">
+      <form action="http://localhost/web/119140030_Tugas2.php" method="GET">
+        <div class="detail-user">
+          <div class="kotak-input">
+            <span class="details">Nama Lengkap</span>
+            <input type="text" name="Nama_Lengkap" placeholder="Nama Lengkap" required>
+          </div>
+          <div class="kotak-input">
+            <span class="details">Nama Pengguna</span>
+            <input type="text" name="Nama_Pengguna" placeholder="Nama Pengguna" required>
+          </div>
+          <div class="kotak-input">
+            <span class="details">Email</span>
+            <input type="email" name="Email" placeholder="email" required>
+          </div>
+          <div class="kotak-input">
+            <span class="details">Nomor Telepon</span>
+            <input type="text" name="Nomor_Telepon" placeholder="Nomor Telepon" required>
+          </div>
+          <div class="kotak-input">
+            <span class="details">Password</span>
+            <input type="password" name="Password" placeholder="password" required>
+          </div>
+          <div class="kotak-input">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="Confirm_Password" placeholder="Confirm password" required>
+          </div>
+        </div>
+        <div class="jenis-kelamin">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="jenis-kelamin">Gender</span>
+          <div class="kategori">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Pria</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Wanita</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Tidak keduanya</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Daftar">
+        </div>
+      </form>
+    </div>
+  </div>
+
+<style>
+  * {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    color: #0D9F93;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(100deg, #33D2FF, #56FF33);
+  }
+
+  .tugas {
+    max-width: 700px;
+    width: 100%;
+    background-color: #C9F71E;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(209, 15, 15, 0.692); 
+  }
+
+  .tugas .judul {
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+  }
+
+
+
+  .isi form .detail-user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+
+  form .detail-user .kotak-input {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+
+  form .kotak-input span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .detail-user .kotak-input input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .detail-user .kotak-input input:focus,
+  .detail-user .kotak-input input:valid {
+    border-color: #349208;
+  }
+
+  form .jenis-kelamin .jenis-kelamin {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  form .kategori {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+  }
+
+  form .kategori label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  form .kategori label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  #dot-1:checked~.kategori label .one,
+  #dot-2:checked~.kategori label .two,
+  #dot-3:checked~.kategori label .three {
+    background: #000000;
+    border-color: #d9d9d9;
+  }
+
+  form input[type="radio"] {
+    display: none;
+  }
+
+  form .button {
+    height: 45px;
+    margin: 35px 0
+  }
+
+  form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(100deg, #0b86d8, #e0dd0d);
+  }
+
+  form .button input:hover {
+    background: linear-gradient(-135deg, #33D2FF, #56FF33);
+  }
+
+  @media(max-width: 584px) {
+    .tugas {
+        max-width: 100%;
+    }
+
+    form .detail-user .kotak-input {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .kategori {
+        width: 100%;
+    }
+
+    .isi form .detail-user {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .detail-user::-webkit-scrollbar {
+        width: 5px;
+    }
+  }
+
+  @media(max-width: 459px) {
+    .tugas .isi .kategori {
+        flex-direction: column;
+    }
+  }
+</style>
+
+</body>
+</html>
